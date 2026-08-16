@@ -120,13 +120,13 @@ Here are some examples of how you can use the script:
 - Get APOD dates for a specific year:
 
 ```bash
-./fetch-images-NASA.sh -g 23
+./fetch-images-NASA.sh -g 26
 ```
 
 - Download APOD images for a specific year:
 
 ```bash
-./fetch-images-NASA.sh -d 23
+./fetch-images-NASA.sh -d 26
 ```
 
 - Customize the download path and get APOD dates:
@@ -135,22 +135,22 @@ Here are some examples of how you can use the script:
 ./fetch-images-NASA.sh -p ./new_path -g 22
 ```
 
-- Setup as background an specific image day using the format YYMMDD (per example, 240416, 230315).
+- Setup as background an specific image day using the format YYMMDD (per example, 260416, 260315).
 
 ```bash
-./fetch-images-NASA.sh -b 240416
+./fetch-images-NASA.sh -b 260416
 ```
 
 - View APOD images from a specific year in a randomized gallery with a longer display time:
 
 ```bash
-./fetch-images-NASA.sh -s 60 -y 23
+./fetch-images-NASA.sh -s 60 -y 26
 ```
 
 - View the generated HTML file in Firefox with a longer display time for wallpaper candidates:
 
 ```bash
-./fetch-images-NASA.sh -f -s 300 -w 23
+./fetch-images-NASA.sh -f -s 300 -w 26
 ```
 
 
