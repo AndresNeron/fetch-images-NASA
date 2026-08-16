@@ -22,15 +22,15 @@ helpPanel(){
 	echo -e "\t${orangeColour}-f\t${endColour}${grayColour} Firefox switch to view the .html file${endColour}"
 	echo -e "\t${orangeColour}-h\t${endColour}${grayColour} Show this help message${endColour}"
 	echo -e "\n\t${orangeColour}Examples:\t${endColour}"
-	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -g${endColour} ${greenColour}23${endColour}"
-	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -d${endColour} ${greenColour}23${endColour}"
-	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -b${endColour} ${greenColour}240416${endColour}"
+	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -g${endColour} ${greenColour}26${endColour}"
+	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -d${endColour} ${greenColour}26${endColour}"
+	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -b${endColour} ${greenColour}260416${endColour}"
 	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -l${endColour}${endColour}"
 	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -p${endColour} ${greenColour}"./new_path"${endColour} ${orangeColour}-g${endColour} ${greenColour}22${endColour}"
-	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -s${endColour} ${greenColour}60${endColour} ${orangeColour}-y${endColour} ${greenColour}24${endColour}"
-	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -s${endColour} ${greenColour}60${endColour} ${orangeColour}-u${endColour} ${greenColour}24${endColour}"
-	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -s${endColour} ${greenColour}60${endColour} ${orangeColour}-a${endColour} ${greenColour}24${endColour}"
-	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -f -s${endColour} ${greenColour}300${endColour} ${orangeColour}-w${endColour} ${greenColour}23${endColour}"
+	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -s${endColour} ${greenColour}60${endColour} ${orangeColour}-y${endColour} ${greenColour}26${endColour}"
+	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -s${endColour} ${greenColour}60${endColour} ${orangeColour}-u${endColour} ${greenColour}26${endColour}"
+	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -s${endColour} ${greenColour}60${endColour} ${orangeColour}-a${endColour} ${greenColour}26${endColour}"
+	echo -e "\t${turquoiseColour} ./fetch-images-NASA.sh${endColour}${orangeColour} -f -s${endColour} ${greenColour}300${endColour} ${orangeColour}-w${endColour} ${greenColour}26${endColour}"
 	exit 0
 }
 

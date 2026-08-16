@@ -10,7 +10,7 @@
 # This is the default path where the images will be saved.
 # You can change it as needed.
 default_path="/usr/share/backgrounds/astronomy/NASA"
-default_path=$(pwd) # Assuming you are in the root path of the project
+default_path="$(dirname "$(realpath "$0")")" # Assuming you are in the root path of the project
 
 # Create path if not exist
 if [ ! -d "$default_path" ]; then
@@ -125,4 +125,3 @@ tput cnorm
 if [ $counter -eq 0 ]; then
 	helpPanel
 fi
-
