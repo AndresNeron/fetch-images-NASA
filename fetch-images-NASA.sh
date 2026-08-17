@@ -14,19 +14,19 @@ default_path="$(dirname "$(realpath "$0")")" # Assuming you are in the root path
 
 # Create path if not exist
 if [ ! -d "$default_path" ]; then
-	mkdir -p $default_path
+    mkdir -p $default_path
 fi
 
 default_path2="$default_path/Images"
 if [ ! -d "$default_path2" ]; then
-	mkdir -p $default_path2
+    mkdir -p $default_path2
 fi
 
 # Include function files
 for file in "$default_path/functions/"*/*; do
-	if [ -f "$file" ]; then
-		source "$file"
-	fi
+    if [ -f "$file" ]; then
+        source "$file"
+    fi
 done
 
 
@@ -45,83 +45,88 @@ global_seconds=10
 #BackUp
 
 counter=0
-while getopts "g:d:p:hi:b:cly:wau:s:f" arg; do
-	case $arg in
-		g)
-			year=$OPTARG
-			get_Dates2 $year
-			echo "$default_path/Dates/Dates_$year.txt"
-			let counter+=1
-			;;
-		d)
-			year=$OPTARG
-			download_images $year
-			let counter+=1
-			;;
-		p)
-			path=$OPTARG
-			change_Path $path
-			let counter+=1
-			;;
-		h)
-			helpPanel;
-			;;
-		i)
-			year=$OPTARG
-			image_displayed $year
-			let counter+=1
-			;;
-		b)
-			date=$OPTARG
-			set_Background $date
-			let counter+=1
-			;;
-		c)
-			cronjob_everyday
-			let counter+=1
-			;;
-		l)
-			last_image
-			let counter+=1
-			;;
-		y)
-			year=$OPTARG
-			image_displayed_year $year
-			let counter+=1
-			;;
-		w) 
-			display_wallpapers_candidates
-			let counter+=1
-			;;
-		a)
-			all_wallpapers_candidates
-			let counter+=1
-			;;
-		u)
-			year=$OPTARG
-			set_all_wallpapers $year
-			let counter+=1
-			;;
-		s)
-			seconds_tmp=$OPTARG
-			seconds_set $seconds_tmp
-			let counter+=1
-			;;
-		f)
-			firefox_switch
-			let counter+=1
-			;;
-		*)
-			helpPanel;
-    		echo -e "\n${redColour}[!] Invalid option. Exiting...\n${endColour}"
-			exit 1
-			;;
-	esac
+while getopts "g:d:p:hi:b:cly:wau:s:fx:" arg; do
+    case $arg in
+        g)
+            year=$OPTARG
+            get_Dates2 $year
+            echo "$default_path/Dates/Dates_$year.txt"
+            let counter+=1
+            ;;
+        d)
+            year=$OPTARG
+            download_images $year
+            let counter+=1
+            ;;
+        p)
+            path=$OPTARG
+            change_Path $path
+            let counter+=1
+            ;;
+        h)
+            helpPanel;
+            ;;
+        i)
+            year=$OPTARG
+            image_displayed $year
+            let counter+=1
+            ;;
+        b)
+            date=$OPTARG
+            set_Background $date
+            let counter+=1
+            ;;
+        x)
+            image_path=$OPTARG
+            set_Background_full_path "$image_path"
+            let counter+=1
+            ;;
+        c)
+            cronjob_everyday
+            let counter+=1
+            ;;
+        l)
+            last_image
+            let counter+=1
+            ;;
+        y)
+            year=$OPTARG
+            image_displayed_year $year
+            let counter+=1
+            ;;
+        w) 
+            display_wallpapers_candidates
+            let counter+=1
+            ;;
+        a)
+            all_wallpapers_candidates
+            let counter+=1
+            ;;
+        u)
+            year=$OPTARG
+            set_all_wallpapers $year
+            let counter+=1
+            ;;
+        s)
+            seconds_tmp=$OPTARG
+            seconds_set $seconds_tmp
+            let counter+=1
+            ;;
+        f)
+            firefox_switch
+            let counter+=1
+            ;;
+        *)
+            helpPanel;
+            echo -e "\n${redColour}[!] Invalid option. Exiting...\n${endColour}"
+            exit 1
+            ;;
+    esac
 done
 
 
 tput cnorm
 
 if [ $counter -eq 0 ]; then
-	helpPanel
+    helpPanel
 fi
